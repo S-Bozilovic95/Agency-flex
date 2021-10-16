@@ -1,0 +1,36 @@
+/* ***********************************
+GOOGLE GONTS
+*********************************** */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Raleway:400,700");
+/* ***********************************
+EXTERNAL FILES
+*********************************** */
+/* ***********************************
+DEFAULT STYLES
+*********************************** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif; }
+
+.container {
+  width: 90%;
+  margin: auto; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    transition: 0.4s ease; }
+
+ul {
+  list-style-type: none; }
+
+/*# sourceMappingURL=style.css.map */
