@@ -45,3 +45,74 @@ a {
 ul {
   list-style-type: none;
 }
+
+
+// HEADER
+
+header{
+
+  background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../img/header.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  nav{
+    @include flex(space-between,center,row,wrap);
+    padding-top: 20px;
+
+    @media(max-width:768px){
+      flex-direction: column;
+    }
+
+    .logo{
+      color: $white;
+      font-size: 2rem;
+
+      &:hover{
+        color: $gray;
+      }
+
+      span{
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
+
+    ul{
+      @include flex(center,center,row,nowrap);
+
+      li{
+        padding: 0px 10px;
+
+        a{
+          color: $white;
+          text-transform: uppercase;
+          font-size: 1.1rem;
+
+          &:hover{
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+
+  hgroup{
+    @include flex(center, center, column, wrap);
+    height: 90vh;
+    color: $white;
+    text-align: center;
+
+
+    h1{
+      padding: 10px 0px;
+      font-size: 3rem;
+
+      @media(max-width:768px){
+        font-size: 2rem;
+      }
+    }
+  }
+}
