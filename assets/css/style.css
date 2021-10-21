@@ -33,6 +33,9 @@ a {
 ul {
   list-style-type: none; }
 
+@keyframes typing {
+  from {
+    width: 0; } }
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
   width: 100%;
@@ -66,10 +69,19 @@ header {
       flex-wrap: nowrap; }
       header nav ul li {
         padding: 0px 10px; }
+        @media (max-width: 768px) {
+          header nav ul li {
+            padding: 0px 5px; } }
+        @media (max-width: 320px) {
+          header nav ul li {
+            padding: 0px 1px; } }
         header nav ul li a {
           color: #fff;
           text-transform: uppercase;
           font-size: 1.1rem; }
+          @media (max-width: 768px) {
+            header nav ul li a {
+              font-size: 0.9rem; } }
           header nav ul li a:hover {
             color: gray; }
   header hgroup {
@@ -87,5 +99,14 @@ header {
       @media (max-width: 768px) {
         header hgroup h1 {
           font-size: 2rem; } }
+    header hgroup h4 {
+      width: 21ch;
+      animation: typing steps(21);
+      animation-duration: 2s;
+      overflow: hidden;
+      font-size: 1.4rem;
+      font-family: monospace;
+      border-right: 3px solid;
+      white-space: nowrap; }
 
 /*# sourceMappingURL=style.css.map */
