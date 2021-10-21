@@ -52,6 +52,15 @@ ul {
   }
 }
 
+.line{
+  display: block;
+  content: "";
+  width: 200px;
+  height: 2px;
+  background-color: $pink;
+  margin: 10px 0px;
+}
+
 
 // HEADER
 
@@ -142,6 +151,57 @@ header{
       font-family: monospace;
       border-right: 3px solid;
       white-space: nowrap;
+    }
+  }
+}
+
+
+
+// ABOUT
+
+.about{
+  padding: $padding;
+  @include flex(space-between,center,row,wrap);
+
+  article{
+    flex: 0 0 45%;
+
+    @media(max-width:768px){
+      flex: 0 0 100%;
+    }
+
+    &:first-child{
+      h3{
+        font-size: 3rem;
+
+        @media(max-width:768px){
+          font-size: 2rem;
+        }
+      }
+
+      h5{
+        font-size: 1.5rem;
+        padding: 15px 0px;
+
+        &::after{
+          @extend .line;
+        }
+      }
+
+      button{
+       @include btn;
+      }
+
+
+    }
+
+    &:last-child{
+      img{
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        box-shadow:  0 0 20px $gray;
+      }
     }
   }
 }
