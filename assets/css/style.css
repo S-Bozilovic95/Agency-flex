@@ -36,7 +36,7 @@ ul {
 @keyframes typing {
   from {
     width: 0; } }
-.line, .about article:first-child h5::after, .team h5::after, .numbers .container article h3::after {
+.line, .about article:first-child h5::after, .team h5::after, .numbers .container article h3::after, .gallery h3::after {
   display: block;
   content: "";
   width: 200px;
@@ -247,5 +247,38 @@ header {
           background-color: #000; }
       .numbers .container article p {
         font-weight: bold; }
+
+.gallery {
+  padding: 50px 0px; }
+  .gallery h3 {
+    font-size: 3rem; }
+  .gallery .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .gallery .row article {
+      flex: 0 0 24%;
+      position: relative; }
+      @media (max-width: 768px) {
+        .gallery .row article {
+          flex: 0 0 100%;
+          margin-top: 20px; } }
+      .gallery .row article img {
+        width: 100%;
+        height: auto; }
+        .gallery .row article img:hover {
+          opacity: 0.8;
+          transition: 0.4s ease; }
+      .gallery .row article .article-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+        background: #f20f97;
+        padding: 10px;
+        opacity: 0.7; }
 
 /*# sourceMappingURL=style.css.map */
