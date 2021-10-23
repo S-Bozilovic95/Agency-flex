@@ -298,3 +298,43 @@ header{
     }
   }
 }
+
+
+
+// NUMBERS
+
+
+.numbers{
+  padding: $padding;
+  text-align: center;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+
+  .container{
+    @include flex(space-between,center,row,wrap);
+
+    article{
+      flex: 0 0 24%;
+
+      @media(max-width:768px){
+        flex: 0 0 50%;
+      }
+
+      h3{
+        font-size: 2rem;
+
+        &::after{
+          @extend .line;
+          width: 100px;
+          margin: 15px auto;
+          background-color: $black;
+        }
+      }
+
+      p{
+        font-weight: bold;
+      }
+    }
+
+  }
+}

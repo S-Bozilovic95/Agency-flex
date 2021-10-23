@@ -36,7 +36,7 @@ ul {
 @keyframes typing {
   from {
     width: 0; } }
-.line, .about article:first-child h5::after, .team h5::after {
+.line, .about article:first-child h5::after, .team h5::after, .numbers .container article h3::after {
   display: block;
   content: "";
   width: 200px;
@@ -222,5 +222,30 @@ header {
         @media (max-width: 768px) {
           .team .row article .team-text {
             opacity: 1; } }
+
+.numbers {
+  padding: 50px 0px;
+  text-align: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+  .numbers .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .numbers .container article {
+      flex: 0 0 24%; }
+      @media (max-width: 768px) {
+        .numbers .container article {
+          flex: 0 0 50%; } }
+      .numbers .container article h3 {
+        font-size: 2rem; }
+        .numbers .container article h3::after {
+          width: 100px;
+          margin: 15px auto;
+          background-color: #000; }
+      .numbers .container article p {
+        font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
