@@ -191,8 +191,6 @@ header{
       button{
        @include btn;
       }
-
-
     }
 
     &:last-child{
@@ -201,6 +199,101 @@ header{
         height: auto;
         border-radius: 30px;
         box-shadow:  0 0 20px $gray;
+
+        @media(max-width:768px){
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+
+// TEAM
+
+.team{
+  padding: $padding;
+
+  h3{
+    font-size: 3rem;
+
+    @media(max-width:768px){
+      font-size: 2rem;
+    }
+  }
+
+  h5{
+    font-size: 1.5rem;
+    padding: 15px 0px;
+
+    &::after{
+      @extend .line;
+    }
+  }
+
+  .row{
+    @include flex(space-between,center,row,wrap);
+
+    article{
+      flex: 0 0 24%;
+      position: relative;
+      margin-top: 20px;
+
+      @media(max-width:768px){
+        flex: 0 0 100%;
+      }
+
+      &:hover .team-overlay{
+          bottom: 0;
+          height: 98%;
+          transition: $transition;
+      }
+
+      img{
+        width: 100%;
+        height: auto;
+      }
+
+      .team-overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        background: rgba(0,0,0,0.5);
+
+        @media(max-width:768px){
+          opacity: 0;
+        }
+
+        p{
+          color: $white;
+          font-size: 0.9rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .team-text{
+        position: absolute;
+        top: 80%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: $white;
+        font-size: 1.2rem;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+        padding: 15px;
+        opacity: 0;
+
+        @media(max-width:768px){
+          opacity: 1;
+        }
       }
     }
   }

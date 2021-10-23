@@ -36,7 +36,7 @@ ul {
 @keyframes typing {
   from {
     width: 0; } }
-.line, .about article:first-child h5::after {
+.line, .about article:first-child h5::after, .team h5::after {
   display: block;
   content: "";
   width: 200px;
@@ -155,5 +155,72 @@ header {
       height: auto;
       border-radius: 30px;
       box-shadow: 0 0 20px gray; }
+      @media (max-width: 768px) {
+        .about article:last-child img {
+          margin-top: 20px; } }
+
+.team {
+  padding: 50px 0px; }
+  .team h3 {
+    font-size: 3rem; }
+    @media (max-width: 768px) {
+      .team h3 {
+        font-size: 2rem; } }
+  .team h5 {
+    font-size: 1.5rem;
+    padding: 15px 0px; }
+  .team .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .team .row article {
+      flex: 0 0 24%;
+      position: relative;
+      margin-top: 20px; }
+      @media (max-width: 768px) {
+        .team .row article {
+          flex: 0 0 100%; } }
+      .team .row article:hover .team-overlay {
+        bottom: 0;
+        height: 98%;
+        transition: 0.4s ease; }
+      .team .row article img {
+        width: 100%;
+        height: auto; }
+      .team .row article .team-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5); }
+        @media (max-width: 768px) {
+          .team .row article .team-overlay {
+            opacity: 0; } }
+        .team .row article .team-overlay p {
+          color: #fff;
+          font-size: 0.9rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+      .team .row article .team-text {
+        position: absolute;
+        top: 80%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: #fff;
+        font-size: 1.2rem;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        padding: 15px;
+        opacity: 0; }
+        @media (max-width: 768px) {
+          .team .row article .team-text {
+            opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
