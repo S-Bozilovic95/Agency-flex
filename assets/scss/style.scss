@@ -388,3 +388,56 @@ header{
       }
     }
   }
+
+
+  // CONTACT
+
+  .contact{
+    padding: $padding;
+    
+    @include flex(space-between,center,row,wrap);
+
+    article{
+      flex: 0 0 45%;
+
+      @media(max-width:768px){
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+      }
+
+      img{
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+        box-shadow:  0 0 20px $gray;
+
+        @media(max-width:768px){
+          order: 1;
+        }
+      }
+
+      form{
+        @include flex(space-between,flex-start,column,nowrap);
+
+        @media(max-width:768px){
+          order: 2;
+        }
+
+        input{
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+        }
+
+        textarea{
+          width: 100%;
+          padding: 10px;
+          height: 33%;
+        }
+
+        button{
+          @include btn;
+        }
+      }
+    }
+  }

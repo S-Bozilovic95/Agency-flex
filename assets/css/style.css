@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none; }
   a:hover {
-    transition: 0.4s ease; }
+    transition: 0.7s ease; }
 
 ul {
   list-style-type: none; }
@@ -146,7 +146,7 @@ header {
       margin-top: 30px;
       border-radius: 30px; }
       .about article:first-child button:hover {
-        transition: 0.4s ease;
+        transition: 0.7s ease;
         cursor: pointer;
         border: 1px solid #f20f97;
         box-shadow: inset 300px 0 0 0 #f20f97; }
@@ -185,7 +185,7 @@ header {
       .team .row article:hover .team-overlay {
         bottom: 0;
         height: 98%;
-        transition: 0.4s ease; }
+        transition: 0.7s ease; }
       .team .row article img {
         width: 100%;
         height: auto; }
@@ -270,7 +270,7 @@ header {
         height: auto; }
         .gallery .row article img:hover {
           opacity: 0.8;
-          transition: 0.4s ease; }
+          transition: 0.7s ease; }
       .gallery .row article .article-text {
         position: absolute;
         top: 50%;
@@ -280,5 +280,57 @@ header {
         background: #f20f97;
         padding: 10px;
         opacity: 0.7; }
+
+.contact {
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .contact article {
+    flex: 0 0 45%; }
+    @media (max-width: 768px) {
+      .contact article {
+        flex: 0 0 100%;
+        margin-bottom: 20px; } }
+    .contact article img {
+      width: 100%;
+      height: auto;
+      border-radius: 10%;
+      box-shadow: 0 0 20px gray; }
+      @media (max-width: 768px) {
+        .contact article img {
+          order: 1; } }
+    .contact article form {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      @media (max-width: 768px) {
+        .contact article form {
+          order: 2; } }
+      .contact article form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px; }
+      .contact article form textarea {
+        width: 100%;
+        padding: 10px;
+        height: 33%; }
+      .contact article form button {
+        background: none;
+        border: 1px solid #000;
+        width: 300px;
+        padding: 15px 0px;
+        font-size: 1.2rem;
+        margin-top: 30px;
+        border-radius: 30px; }
+        .contact article form button:hover {
+          transition: 0.7s ease;
+          cursor: pointer;
+          border: 1px solid #f20f97;
+          box-shadow: inset 300px 0 0 0 #f20f97; }
 
 /*# sourceMappingURL=style.css.map */
