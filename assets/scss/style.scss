@@ -441,3 +441,50 @@ header{
       }
     }
   }
+
+
+  // FOOTER
+
+  footer{
+    padding: $padding;
+    background-color: $gray;
+
+    .container{
+      @include flex(space-between,center,row,wrap);
+
+      article{
+        flex: 0 0 30%;
+
+        @media(max-width:768px){
+          flex: 0 0 100%;
+          margin-bottom: 20px;
+        }
+
+        h3{
+          font-size: 1.4rem;
+          color: $pink;
+
+          &::after{
+            @extend .line;
+          }
+        }
+
+        ul{
+          li{
+            color: $white;
+            font-size: 1.2rem;
+            padding-top: 10px;
+
+            .socialNet{
+              i{
+                border: 1px solid $white;
+                border-radius: 50%;
+                padding:10px;
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

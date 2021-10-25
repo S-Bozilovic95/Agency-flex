@@ -36,7 +36,7 @@ ul {
 @keyframes typing {
   from {
     width: 0; } }
-.line, .about article:first-child h5::after, .team h5::after, .numbers .container article h3::after, .gallery h3::after {
+.line, .about article:first-child h5::after, .team h5::after, .numbers .container article h3::after, .gallery h3::after, footer .container article h3::after {
   display: block;
   content: "";
   width: 200px;
@@ -332,5 +332,33 @@ header {
           cursor: pointer;
           border: 1px solid #f20f97;
           box-shadow: inset 300px 0 0 0 #f20f97; }
+
+footer {
+  padding: 50px 0px;
+  background-color: gray; }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    footer .container article {
+      flex: 0 0 30%; }
+      @media (max-width: 768px) {
+        footer .container article {
+          flex: 0 0 100%;
+          margin-bottom: 20px; } }
+      footer .container article h3 {
+        font-size: 1.4rem;
+        color: #f20f97; }
+      footer .container article ul li {
+        color: #fff;
+        font-size: 1.2rem;
+        padding-top: 10px; }
+        footer .container article ul li .socialNet i {
+          border: 1px solid #fff;
+          border-radius: 50%;
+          padding: 10px;
+          font-size: 1.2rem; }
 
 /*# sourceMappingURL=style.css.map */
