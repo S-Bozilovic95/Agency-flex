@@ -339,7 +339,7 @@ footer {
   footer .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap; }
     footer .container article {

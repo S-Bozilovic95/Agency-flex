@@ -450,7 +450,7 @@ header{
     background-color: $gray;
 
     .container{
-      @include flex(space-between,center,row,wrap);
+      @include flex(space-between,flex-start,row,wrap);
 
       article{
         flex: 0 0 30%;
